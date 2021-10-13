@@ -1,17 +1,17 @@
-import Header from "components/navbar";
+import About from "components/about";
 import React, { ReactElement } from "react";
-import { Container, Row } from "reactstrap";
 import "./styles/theme.min.css";
+import { Switch, Route, HashRouter } from "react-router-dom";
+import Home from "components/home";
 
 const App = (): ReactElement => {
   return (
-    <Container fluid className="px-0">
-      <Header />
-      <Row
-        className="d-flex w-100 h-100"
-        style={{ backgroundColor: "aliceblue" }}
-      />
-    </Container>
+    <HashRouter>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+      </Switch>
+    </HashRouter>
   );
 };
 

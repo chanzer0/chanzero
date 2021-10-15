@@ -60,8 +60,8 @@ const Header = (): ReactElement => {
                     <DropdownItem>
                       <NavLink>Rocky Mountain High</NavLink>
                     </DropdownItem>
-                    <DropdownItem>
-                      <NavLink>Homestead</NavLink>
+                    <DropdownItem disabled>
+                      <NavLink disabled>Homestead</NavLink>
                     </DropdownItem>
                   </DropdownMenu>
                 </UncontrolledDropdown>

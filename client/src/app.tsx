@@ -1,4 +1,4 @@
-import About from "components/about";
+import About from "components/about/about";
 import React, { ReactElement } from "react";
 import "./styles/theme.min.css";
 import { Switch, Route, HashRouter } from "react-router-dom";

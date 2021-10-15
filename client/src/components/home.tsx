@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { Container } from "reactstrap";
-import Header from "./navbar";
+import Header from "./header/header";
 
 const Home = (): ReactElement => {
   return (

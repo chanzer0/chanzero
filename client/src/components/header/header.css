@@ -1,0 +1,16 @@
+.navPointer {
+  cursor: pointer;
+}
+
+.navLinkText {
+  text-decoration: none;
+  color: white !important;
+}
+
+.styleBlack {
+  color: black !important;
+}
+
+.brandText {
+  font-size: 3rem;
+}

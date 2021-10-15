@@ -18,6 +18,7 @@ import {
   NavLink,
   UncontrolledDropdown,
 } from "reactstrap";
+import "./header.css";
 
 const Header = (): ReactElement => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,33 +36,36 @@ const Header = (): ReactElement => {
       className="navbar-light bg-white topbar mb-4 static-top shadow py-0"
     >
       <NavbarBrand>
-        <h1 className="monterey-text py-0">chanzero</h1>
+        <NavLink tag={Link} to="/" className="navPointer">
+          <h1 className="monterey-text py-0 brandText">chanzero</h1>
+        </NavLink>
       </NavbarBrand>
       <NavbarToggler onClick={() => setIsOpen(!isOpen)} />
       <Collapse isOpen={isOpen} navbar>
         <Nav navbar className="w-100">
           {isDesktop ? (
             <>
-              <NavItem
-                className="d-flex align-items-center px-4"
-                style={{ color: "black" }}
-              >
-                <NavLink tag={Link} to="/about" style={{ cursor: "pointer" }}>
+              <NavItem className="d-flex align-items-center px-4 styleBlack">
+                <NavLink tag={Link} to="/about" className="navPointer">
                   About
                 </NavLink>
               </NavItem>
 
               <NavItem className="d-flex align-items-center">
                 <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret style={{ color: "black" }}>
+                  <DropdownToggle nav caret className="styleBlack">
                     Collections
                   </DropdownToggle>
                   <DropdownMenu>
                     <DropdownItem>
-                      <NavLink>Rocky Mountain High</NavLink>
+                      <NavLink tag={Link} to="/collections/rocky-mountain-high">
+                        Rocky Mountain High
+                      </NavLink>
                     </DropdownItem>
                     <DropdownItem disabled>
-                      <NavLink disabled>Homestead</NavLink>
+                      <NavLink disabled to="/collections/homestead">
+                        Homestead
+                      </NavLink>
                     </DropdownItem>
                   </DropdownMenu>
                 </UncontrolledDropdown>
@@ -86,24 +90,12 @@ const Header = (): ReactElement => {
                     </DropdownToggle>
                     <DropdownMenu>
                       <DropdownItem>
-                        <NavLink
-                          style={{
-                            textDecoration: "none",
-                            color: "white !important",
-                          }}
-                        >
+                        <NavLink className="navLinkText">
                           Rocky Mountain High
                         </NavLink>
                       </DropdownItem>
                       <DropdownItem>
-                        <NavLink
-                          style={{
-                            textDecoration: "none",
-                            color: "white !important",
-                          }}
-                        >
-                          Homestead
-                        </NavLink>
+                        <NavLink className="navLinkText">Homestead</NavLink>
                       </DropdownItem>
                     </DropdownMenu>
                   </UncontrolledDropdown>
@@ -126,24 +118,6 @@ const Header = (): ReactElement => {
         </Nav>
       </Collapse>
     </Navbar>
-    // <Navbar color="faded" light>
-    //   <NavbarBrand href="/" className="mr-auto">
-    //     reactstrap
-    //   </NavbarBrand>
-    //   <NavbarToggler onClick={() => setIsOpen(!isOpen)} className="mr-2" />
-    //   <Collapse isOpen={isOpen} navbar>
-    //     <Nav navbar>
-    //       <NavItem>
-    //         <NavLink href="/components/">Components</NavLink>
-    //       </NavItem>
-    //       <NavItem>
-    //         <NavLink href="https://github.com/reactstrap/reactstrap">
-    //           GitHub
-    //         </NavLink>
-    //       </NavItem>
-    //     </Nav>
-    //   </Collapse>
-    // </Navbar>
   );
 };
 

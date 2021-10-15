@@ -23,18 +23,34 @@
   box-shadow: 0 0 4px 3px hsl(0deg 0% 0% / 50%);
 }
 
-@include media-breakpoint-up(sm) {
+@media (min-width: 0px) {
   .aboutContainer {
-    padding-top: 2rem;
+    padding-top: 5rem !important;
   }
 }
-@include media-breakpoint-up(md) {
+
+@media (min-width: 576px) {
   .aboutContainer {
-    padding-top: 5rem;
+    padding-top: 8rem !important;
   }
 }
-@include media-breakpoint-up(lg) {
+@media (min-width: 768px) {
   .aboutContainer {
-    padding-top: 9rem;
+    padding-top: 11rem !important;
+  }
+}
+@media (min-width: 992px) {
+  .aboutContainer {
+    padding-top: 4rem !important;
+  }
+}
+@media (min-width: 1200px) {
+  .aboutContainer {
+    padding-top: 4rem !important;
+  }
+}
+@media (min-width: 2560px) {
+  .aboutContainer {
+    padding-top: 9rem !important;
   }
 }

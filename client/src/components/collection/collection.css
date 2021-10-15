@@ -1,0 +1,26 @@
+.collectionName {
+  text-transform: capitalize;
+  font-size: 3rem;
+}
+
+.my-masonry-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 15px;
+  margin-left: 0px;
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 15px;
+  background-clip: padding-box;
+}
+
+.my-masonry-grid_column > .card {
+  margin-bottom: 15px;
+  box-shadow: rgb(136 152 170 / 25%) 0px 0px 1rem 0px;
+}
+
+.my-masonry-grid_column > .card > img {
+  cursor: pointer;
+}

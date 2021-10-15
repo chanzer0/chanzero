@@ -1,3 +1,4 @@
+import Header from "components/header/header";
 import React, { ReactElement } from "react";
 import {
   Card,
@@ -8,8 +9,7 @@ import {
   Container,
   Row,
 } from "reactstrap";
-import Header from "../navbar";
-import "./about.scss";
+import "./about.css";
 
 const About = (): ReactElement => {
   return (
